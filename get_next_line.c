@@ -6,7 +6,7 @@
 /*   By: micampos <micampos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 14:12:00 by micampos          #+#    #+#             */
-/*   Updated: 2026/06/04 14:05:40 by micampos         ###   ########.fr       */
+/*   Updated: 2026/06/04 15:16:46 by micampos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,30 +38,21 @@ char	*get_next_line(int fd)
 	}
 	return (new_line = extract_line(helper, buffer));
 }
-#include <stdio.h>
-int main(void)
-{
-	int fd;
-	char *str;
+// #include <stdio.h>
+// int main(void)
+// {
+// 	int fd;
+// 	char *str;
 
-	fd = open("text.txt", O_RDONLY);
-	// while ((str = get_next_line(0)) != NULL)  
-	// {
-	// 	printf("line: %s", str);
-	// 	printf("---------------------------\n");
-	// 	free(str);
-	// }
-	str = get_next_line(fd);
-	printf("line: %s", str);
-	free(str);
-	return (0);
-}
-
-
-read
-
-new line = hello\n
-char *stash = how 
-get_next_line 
-print 
-free
+// 	fd = open("text.txt", O_RDONLY);
+// 	// while ((str = get_next_line(0)) != NULL)  
+// 	// {
+// 	// 	printf("line: %s", str);
+// 	// 	printf("---------------------------\n");
+// 	// 	free(str);
+// 	// }
+// 	str = get_next_line(fd);
+// 	printf("line: %s", str);
+// 	free(str);
+// 	return (0);
+// }

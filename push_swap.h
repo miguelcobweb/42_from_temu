@@ -6,7 +6,7 @@
 /*   By: micampos <micampos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 17:26:20 by ltomas-d          #+#    #+#             */
-/*   Updated: 2026/07/06 15:58:55 by micampos         ###   ########.fr       */
+/*   Updated: 2026/07/09 16:07:24 by micampos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ void	reverse_rotate(t_stack *s);
 void    reverse_rotate_a(t_stack *a);
 void    reverse_rotate_b(t_stack *b);
 void	reverse_rotate_rrr(t_stack *a, t_stack *b);
-t_node	*lstnew(int n);
-void	lstaddfront(t_node **lst, int n);
+t_node	*lstnew(int n, int i);
+void	lstaddfront(t_node **lst, int n, int i);
 t_stack	*makelst(int argc, char **argv);
 
 float	disorder(t_stack *a);
@@ -68,6 +68,7 @@ t_stack *simple(t_stack *a, t_stack *b);
 int		*array_copy(t_stack *a);
 int		*sort_array(int *sorting_array, t_stack *a);
 void	rank(int *sorting_array, t_stack *a);
+int		complex(t_stack *a, t_stack *b);
 
 
 void	ft_bzero(void *s, size_t n);

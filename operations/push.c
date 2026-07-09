@@ -6,7 +6,7 @@
 /*   By: micampos <micampos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 18:38:36 by ltomas-d          #+#    #+#             */
-/*   Updated: 2026/07/02 14:13:36 by micampos         ###   ########.fr       */
+/*   Updated: 2026/07/09 16:01:13 by micampos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,18 @@ void	do_push(t_stack *src, t_stack *dst)
 	t_node	*node;
 	t_node	*new_head;
 	t_node	*last;
+	int temp;
 
 	if(src->size == 0)
 		return;
 	node = src->head;
+	temp = node -> index;
 	/*Caso que tenha so 1 elemento na stack*/
 	 if (src->size == 1)
     {
         src->head = NULL;
         src->size--;
-        lstaddfront(&dst->head, node->data);
+        lstaddfront(&dst->head, node->data, temp);
         dst->size++;
         free(node);
         return ;
@@ -37,7 +39,7 @@ void	do_push(t_stack *src, t_stack *dst)
 	new_head-> prev = last;
 	last->next = new_head;
 	src->size--;
-	lstaddfront(&(dst->head), node->data);
+	lstaddfront(&(dst->head), node->data, temp);
 	dst->size++;
     free(node);
 }

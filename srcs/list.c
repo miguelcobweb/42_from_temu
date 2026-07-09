@@ -6,13 +6,13 @@
 /*   By: micampos <micampos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 15:34:01 by ltomas-d          #+#    #+#             */
-/*   Updated: 2026/07/02 14:05:41 by micampos         ###   ########.fr       */
+/*   Updated: 2026/07/09 15:31:15 by micampos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_node	*lstnew(int n)
+t_node	*lstnew(int n, int i)
 {
 	t_node *node;
 
@@ -22,16 +22,16 @@ t_node	*lstnew(int n)
 	node -> data = n;
 	node -> next = node;
 	node -> prev = node;
-	node -> index = 0;
+	node -> index = i;
 	return (node);
 }
 
-void	lstaddfront(t_node **lst, int n)
+void	lstaddfront(t_node **lst, int n, int i)
 {
 	t_node *temp;
 	t_node *last;
 
-	temp = lstnew(n);
+	temp = lstnew(n, i);
 	if (!temp)
     	return ;
 	if(*lst == NULL)
@@ -60,7 +60,7 @@ t_stack	*makelst(int argc, char **argv)
 	i = argc - 1;
 	while (i >= 1)
 	{
-		lstaddfront(&stack->head, atoi(argv[i]));
+		lstaddfront(&stack->head, atoi(argv[i]), 0);
 		stack -> size++;
 		i--;
 	}

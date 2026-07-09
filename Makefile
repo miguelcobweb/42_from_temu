@@ -29,6 +29,7 @@ ALGO_FILE = $(ALGO_DIR)/disorder.c \
 			$(ALGO_DIR)/array_copy.c \
 			$(ALGO_DIR)/sort_array.c \
 			$(ALGO_DIR)/rank.c \
+			$(ALGO_DIR)/complex.c \
 
 SRCS = $(SRCS_FILES) $(OPERATIONS_FILES) $(PRINTF_FILES) $(ALGO_FILE)
 
